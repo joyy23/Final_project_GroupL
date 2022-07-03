@@ -105,7 +105,8 @@ class Process:
         df_cat = df_cat[df_cat['Category'] != 'Income']
         df_cat['Amount'] = abs(df_cat['Amount'])
         self.expense = df_cat.groupby('Category')['Amount'].apply(list).to_dict()
-        ```
+```
+        
 -New class to create all functions       
 ```py
 class Budget(Process):
@@ -125,7 +126,7 @@ class Budget(Process):
         #calculate the balance 
         self.balance = self.total_income - self.total_expense
         self.balance = round(self.balance,2)
-        ```
+```
     
 -create display function to show the result
     ```py
@@ -148,7 +149,7 @@ class Budget(Process):
             for i in l:
                 cat_sum += i      
             print("\n{} : {} %".format(category, round((cat_sum / self.total_expense)*100,2)))
-            ```
+    ```
 
 -create a function to query the expense of a certain category
     ```py
@@ -164,7 +165,7 @@ class Budget(Process):
             print(round(self.cat[cat_required],2))
         else:
             print('Sorry, there is no such category')
-            ```
+    ```
 
 -create the fucntion for users' saving plan in amount of money
     ```py
@@ -185,7 +186,7 @@ class Budget(Process):
             print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
         else:
             print("Based on your balance, you are on track to reach your savings goals")
-            ```
+    ```
 
 -create a function to make a saving plan based in percentage of income
     ```py
@@ -198,7 +199,7 @@ class Budget(Process):
             print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
         else:
             print("Based on your balance, you are on track to reach your savings goals")
-            ```
+     ```
 
 -we also created functions for those who don't have a balance sheet and want to input income and expense manually
     ```py
