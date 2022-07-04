@@ -1,8 +1,8 @@
 # Advanced_Programming_Final_Project_GroupL Documentation
 
-## Project: Personal saving management
+## Project: Personal saving management system
 
-###by GroupL:
+### by GroupL:
 - Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
 
 ### **Conceptual specifications**
