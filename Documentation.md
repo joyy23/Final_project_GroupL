@@ -31,12 +31,11 @@ To creat all the functions
 
 
 #### **`project3_GroupL.py`**
-
+-create data-processing function to process original balance dataset downloaded from N26
 ```py
 import pandas as pd
 import numpy as np 
 
-#create data-processing function to process original balance dataset downloaded from N26
 class Process:
     def __init__(self):
         df = pd.read_csv('statement-2022-06.csv')
@@ -107,7 +106,9 @@ class Process:
         self.expense = df_cat.groupby('Category')['Amount'].apply(list).to_dict()
 ```
         
--New class to create all functions       
+-New class to create all functions 
+
+-Get total expenses and income
 ```py
 class Budget(Process):
     def __init__(self):
@@ -129,7 +130,7 @@ class Budget(Process):
 ```
     
 -create display function to show the result
-    ```py
+```py
     #create display function to show the result
     def display_income(self):
         print("\nTotal income: {}".format(self.total_income))
@@ -139,20 +140,20 @@ class Budget(Process):
     
     def user_balance(self):
         print("\nUser balance: {}".format(self.balance))
-    ```
+ ```
     
 -get a report of the total expense of different categories 
-    ```py
+```py
     def expense_distribution(self):
         for category,l in self.expense.items():
             cat_sum = 0 
             for i in l:
                 cat_sum += i      
             print("\n{} : {} %".format(category, round((cat_sum / self.total_expense)*100,2)))
-    ```
+```
 
 -create a function to query the expense of a certain category
-    ```py
+```py
     def cat_expense(self):
         self.cat = {}
         for category,l in self.expense.items():
@@ -165,10 +166,10 @@ class Budget(Process):
             print(round(self.cat[cat_required],2))
         else:
             print('Sorry, there is no such category')
-    ```
+```
 
 -create the fucntion for users' saving plan in amount of money
-    ```py
+```py
     def savings_basic(self):
         #ask about the saving goal
         self.basic_goal = int(input('\nEnter amount you want to save over the next year: '))
@@ -186,10 +187,10 @@ class Budget(Process):
             print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
         else:
             print("Based on your balance, you are on track to reach your savings goals")
-    ```
+```
 
 -create a function to make a saving plan based in percentage of income
-    ```py
+```py
     def savings_advanced(self):
         self.adv_percent = int(input('\nEnter % ' + 'of income you want to save: '))
         self.adv_monthly_amount = (self.adv_percent * self.total_income) / 100
@@ -199,10 +200,10 @@ class Budget(Process):
             print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
         else:
             print("Based on your balance, you are on track to reach your savings goals")
-     ```
+```
 
 -we also created functions for those who don't have a balance sheet and want to input income and expense manually
-    ```py
+```py
     def add_income(self):
         while True:
             income_amount = int(input('Enter income amount: '))
@@ -232,7 +233,7 @@ class Budget(Process):
     def income_distribution(self):
         for i in range(len(self.l_income)):
             print("{} : {} %".format(self.l_income_name[i],round((self.l_income[i] / self.total_income)*100, 2)))
-   ```
+```
     
 -the gate to call the function
 ```py
@@ -269,4 +270,4 @@ if __name__ == '__main__':
         x = input("\nDo you want to continue? (y/n)")
         if x == 'N' or x == 'n':
             break
-            ```
+```
