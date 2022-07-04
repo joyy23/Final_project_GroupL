@@ -2,8 +2,8 @@
 
 ## Project: Personal saving management system
 
-### by GroupL:
-### Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
+by GroupL:
+Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
 
 ### **Conceptual specifications**
 
