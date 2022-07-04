@@ -1,4 +1,4 @@
-# Advanced_Programming_Final_Project_GroupL Documentation
+# Advanced_Programming_Final_Project_GroupL -- Documentation
 
 ## Project: Personal saving management system
 
