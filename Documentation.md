@@ -3,7 +3,7 @@
 ## Project: Personal saving management system
 
 ### by GroupL:
-- Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
+### Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
 
 ### **Conceptual specifications**
 
@@ -23,7 +23,7 @@ The system is designed with 2 classes: **Process** for pre-processing of data an
 - To clean the csv file downloaded from N26 account and make sure it can be can be used for later functions
 
 2. The fucntion class `Budget`:
-To creat all the functions 
+- To creat all the functions 
 
 
 #### **`project3_GroupL.py`**
