@@ -33,3 +33,17 @@ class Process:
         outgoing_transactions = df.loc[df['Description']=='Outgoing transactions']['Date']
         incoming_transactions = df.loc[df['Description']=='Incoming transactions']['Date']
         new_balance = df.loc[df['Description']=='Your new balance']['Date']
+        row = df[df['Description'] == 'Previous balance'].index.tolist()[0]
+
+        df = df.iloc[:row]
+        df = df[df['Description'].notna()]
+        df = df.reset_index(drop=True)
+        df = df.replace('Booking Date', np.nan)
+
+        first_list = df.index[df['Date'].notna() == True].tolist()
+        second_list = [x+1 for x in first_list]
+        index_list = first_list + second_list
+        index_list = sorted(index_list)
+        df = df.iloc[index_list]
+        df = df.reset_index(drop=True)
+
