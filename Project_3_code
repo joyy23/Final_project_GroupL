@@ -46,4 +46,32 @@ class Process:
         index_list = sorted(index_list)
         df = df.iloc[index_list]
         df = df.reset_index(drop=True)
+        
+        df['Description'] = np.where((df['Date'].isna() == True) & (df['Description'].str.contains(" • ", case=False) == False),
+                                     np.nan,
+                                     df['Description'])
+        df['Description'] = np.where(df['Description'].str.contains(" • ", case=False) == True,
+                                     df['Description'].str.split(' • ').str[1],
+                                     df['Description'])
+        df['Description'] = df['Description'].fillna('Other')
+
+        df['Category'] = np.where(df['Date'].isna() == False,
+                                  df['Description'].shift(-1),
+                                  np.nan)
+        df = df[df['Category'].notna()]
+        df = df.reset_index(drop=True)
+
+        df['Amount'] = df['Amount'].str.replace(',', '.')
+        df['Amount'] = df['Amount'].str.replace('€', '')
+        df['Amount'] = pd.to_numeric(df['Amount'],errors = 'coerce')
+        df['Category'] = np.where(df['Amount'] > 0, 
+                                     'Income', 
+                                     df['Category'])
+
+        self.l_income = list(df[df['Category'] == 'Income']['Amount'])
+
+        df_cat = df[['Category', 'Amount']]
+        df_cat = df_cat[df_cat['Category'] != 'Income']
+        df_cat['Amount'] = abs(df_cat['Amount'])
+        self.expense = df_cat.groupby('Category')['Amount'].apply(list).to_dict()
 
