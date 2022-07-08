@@ -74,4 +74,18 @@ class Process:
         df_cat = df_cat[df_cat['Category'] != 'Income']
         df_cat['Amount'] = abs(df_cat['Amount'])
         self.expense = df_cat.groupby('Category')['Amount'].apply(list).to_dict()
+        
+class Budget(Process):
+   def __init__(self):
+       super().__init__()
+       #get the total income and expense by suming they up and round them to 2 digits
+       self.total_income = sum(self.l_income)
+       self.total_income = round(self.total_income,2)
+       self.total_expense = 0
+       for x in self.expense.values():
+          for y in x:
+           self.total_expense += y
+       self.total_expense = round(self.total_expense,2)
+
+      
 
