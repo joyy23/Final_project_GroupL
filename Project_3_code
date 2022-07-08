@@ -86,6 +86,7 @@ class Budget(Process):
           for y in x:
            self.total_expense += y
        self.total_expense = round(self.total_expense,2)
-
-      
-
+    
+    #create display function to show income
+    def display_income(self):
+        print("\nTotal income: {}".format(self.total_income))
