@@ -90,3 +90,9 @@ class Budget(Process):
     #create display function to show income
     def display_income(self):
         print("\nTotal income: {}".format(self.total_income))
+        
+    def display_expense(self):
+        print("\nTotal expenses: {}".format(self.total_expense))
+        
+    def user_balance(self):
+        print("\nUser balance: {}".format(self.balance))
