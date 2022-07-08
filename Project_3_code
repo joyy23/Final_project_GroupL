@@ -96,3 +96,10 @@ class Budget(Process):
         
     def user_balance(self):
         print("\nUser balance: {}".format(self.balance))
+        
+    def expense_distribution(self):
+        for category,l in self.expense.items():
+            cat_sum = 0 
+            for i in l:
+                cat_sum += i      
+            print("\n{} : {} %".format(category, round((cat_sum / self.total_expense)*100,2)))
