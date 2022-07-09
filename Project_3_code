@@ -116,3 +116,19 @@ class Budget(Process):
             print(round(self.cat[cat_required],2))
         else:
             print('Sorry, there is no such category')
+            
+     def savings_basic(self):
+        self.basic_goal = int(input('\nEnter amount you want to save over the next year: '))
+        self.basic_monthly_amount = self.basic_goal / 12
+        self.basic_percent = (self.basic_monthly_amount * 100) / self.total_income
+        print("You should save {} {} of your income per month".format(round(self.basic_percent,2),'%'))
+        print("i.e. {} / month".format(round(self.basic_monthly_amount,2)))
+    
+        if(self.basic_monthly_amount > self.balance):
+            print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
+            if self.balance > 0:
+                print('But you finished {} of your goal'.format(round(self.balance/self.basic_monthly_amount,2)))
+            else:
+                print('Try to make both ends meet next month!')
+        else:
+            print("Based on your balance, you are on track to reach your savings goals")
