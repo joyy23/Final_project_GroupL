@@ -274,4 +274,13 @@ if __name__ == '__main__':
 |---- | ---- | ---- |
 |Andrei Ivlev | create data-processing function to process original balance dataset downloaded from N26 | f9638214c65d20d657b785ead110c8709da3e3f3 |
 |Andrei Ivlev | select only useful rows | 4ea09ab1ca498f7c799049cb35597bb2216bdac2 |
-|Andrei Ivlev |transform the information into a dictionary for later use |601853f3c668ea6ade061831fc4afcf5f6bdac39 |
+|Andrei Ivlev | transform the information into a dictionary for later use |601853f3c668ea6ade061831fc4afcf5f6bdac39 |
+|Arundhati Pillay |  |88beab567b97f48a12cb43fcd28478add8424a16 |
+|Arundhati Pillay |  |3372d9251597ef72b4d6317ca9cbbf068bcc4225 |
+|Tsaichi Lee | display expense and user balance |3372d9251597ef72b4d6317ca9cbbf068bcc4225 |
+|Tsaichi Lee | get a report of the total expense of different categories |154befa554e587d9666ac710f2edc63225c310e8 |
+|Jiayi Yang | add a function to query the expense of every category |8a07378ee4a7b6705a5888d95f746d359d3491b8 |
+|Jiayi Yang | add a function to set up the saving goals of next year |a356aeb149bf2dd8b92fe50c567744aba99494fa |
+|Animesh |  | |
+|Animesh |  | |
+
