@@ -267,3 +267,9 @@ if __name__ == '__main__':
         if x == 'N' or x == 'n':
             break
 ```
+
+
+# Code Commitment
+|Andrei Ivlev | create data-processing function to process original balance dataset downloaded from N26 | f9638214c65d20d657b785ead110c8709da3e3f3 |
+|Andrei Ivlev | select only useful rows | 4ea09ab1ca498f7c799049cb35597bb2216bdac2 |
+|Andrei Ivlev |transform the information into a dictionary for later use |601853f3c668ea6ade061831fc4afcf5f6bdac39 |
