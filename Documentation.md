@@ -5,6 +5,9 @@
 by GroupL:
 Andrei Ivlev - Animesh Gautam - Arundhati Pillay - Jiayi Yang - Tsaichi Lee
 
+## GitHub Link:
+https://github.com/joyy23/Final_project_GroupL.git
+
 ### **Conceptual specifications**
 
 This saving management system is used with N26 monthly balance sheet and has several functions:
