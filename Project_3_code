@@ -103,3 +103,16 @@ class Budget(Process):
             for i in l:
                 cat_sum += i      
             print("\n{} : {} %".format(category, round((cat_sum / self.total_expense)*100,2)))
+            
+    def cat_expense(self):
+        self.cat = {}
+        for category,l in self.expense.items():
+            cat_sum = 0 
+            for i in l:
+                cat_sum += i
+            self.cat[category] = cat_sum
+        cat_required = input('Please enter the category expense you want to query ')
+        if cat_required in self.cat.keys():
+            print(round(self.cat[cat_required],2))
+        else:
+            print('Sorry, there is no such category')
