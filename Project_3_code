@@ -141,5 +141,40 @@ class Budget(Process):
         if(self.adv_monthly_amount > self.balance):
             print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
         else:
-            print("Based on your balance, you are on track to reach your savings goals")
+            print("Based on your balance, you are on track to reach your savings goals"
+            
+if __name__ == '__main__':
+    
+    b = Budget()
+    while True:
+        #menu to get corresponding function
+        print("1. Display total income")
+        print("2. Display total expenses")
+        print("3. Display user balance")
+        print("4. Category wise distribution of expenses")
+        print("5. Query the expense of a certain category")
+        print("6. Savings suggestion")
+        print("7. Monthly savings plan")
+        choice = int(input("\nSelect option: "))
+        #call the corresponding function according to the request
+        if choice == 1:
+            b.display_income()
+        elif choice == 2:
+            b.display_expense()
+        elif choice == 3:
+            b.user_balance()
+        elif choice == 4:
+            b.expense_distribution()
+        elif choice == 5:
+            b.cat_expense()
+        elif choice == 6:
+            b.savings_basic()
+        elif choice == 7:
+            b.savings_advanced()
+        x = input("\nDo you want to continue? (y/n)")
+        if x == 'N' or x == 'n':
+            break
+
+            
+
 
