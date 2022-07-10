@@ -284,6 +284,6 @@ if __name__ == '__main__':
 |Tsaichi Lee | get a report of the total expense of different categories |154befa554e587d9666ac710f2edc63225c310e8 |
 |Jiayi Yang | add a function to query the expense of every category |8a07378ee4a7b6705a5888d95f746d359d3491b8 |
 |Jiayi Yang | add a function to set up the saving goals of next year |a356aeb149bf2dd8b92fe50c567744aba99494fa |
-|Animesh |  | |
-|Animesh |  | |
+|Animesh Gautam | add savings function for advanced users | d56426844a168a7b07c3741863be9d6e67cafc12 |
+|Animesh Gautam |create gate to call different functions(menu) | f6a3834b65a7fcf15b31ce36406ce7bd9bcbf1c9 |
 
