@@ -132,3 +132,14 @@ class Budget(Process):
                 print('Try to make both ends meet next month!')
         else:
             print("Based on your balance, you are on track to reach your savings goals")
+            
+     def savings_advanced(self):
+        self.adv_percent = int(input('\nEnter % ' + 'of income you want to save: '))
+        self.adv_monthly_amount = (self.adv_percent * self.total_income) / 100
+        print("You must save {} / month".format(self.adv_monthly_amount))
+        #compare to see if the balance can meet the saving goal per month
+        if(self.adv_monthly_amount > self.balance):
+            print("Based on your balance, you need to reduce expenses or increase income to reach your savings goals")
+        else:
+            print("Based on your balance, you are on track to reach your savings goals")
+
